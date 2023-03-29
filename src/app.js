@@ -5,6 +5,7 @@ const db = require("./utils/database");
 const initModels = require("./models/initModels");
 const userRoutes = require("./routes/users.routes");
 const authRoutes = require("./routes/auth.routes");
+const transporter = require("./utils/mailer");
 const errorHandlerRouter = require("./routes/errorHandler.routes");
 
 initModels();
