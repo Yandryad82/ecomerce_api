@@ -8,7 +8,7 @@ const createUser = async (req, res, next) => {
     console.log(result);
     res.status(201).json(result);
     await Transporter.sendMail({
-      from: 'yandryad82@gmail.com',
+      from: 'ecomerceapi@gmail.com',
       to: result.email,
       subject: `Bienvenido ${result.username}`,
       html: 

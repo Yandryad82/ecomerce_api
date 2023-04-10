@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const morgan = require("morgan");
+require("dotenv").config();
 const db = require("./utils/database");
 const initModels = require("./models/initModels");
 const userRoutes = require("./routes/users.routes");
@@ -15,7 +16,7 @@ app.use(cors());
 app.use(morgan("dev"));
 app.use(express.json());
 
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 
 db.authenticate()
   .then(() => {
